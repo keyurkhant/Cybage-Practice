@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Baazar Khabri</title>
+    <meta name="description" content="Baazar Khabri is a news magazine and blog site, which provides daily news of different fields.">   
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+</html>
+<style type="text/css">
+
+*,
+*:before,
+*:after {
+ box-sizing:inherit
+}
+
+ul {
+    list-style: none;
+}
+
+body { 
+  	margin: 0;
+	font-family: Quicksand;
+	text-rendering: optimizeLegibility;
+	font-size: 16px;
+	line-height: 24px;
+}
+
+/* Full Header Start */
+
+/* Header Start */
+
+.master-header{
+	position: fixed;
+    width: 100%;
+    height: 110px;
+    z-index: 1000;
+    background: white;
+}
+
+.header {
+	position: relative;
+	z-index: 1000;
+	max-width: 1280px;
+	margin: 0 auto;
+	height: 60px;
+	padding: 0 20px;
+	border-bottom: 1px #cdcdcd solid;
+	transition: background .2s ease-in-out;
+}
+
+.header-content{
+	position: relative;
+	width: 100%;
+	height: 60px;
+	z-index: 1000;
+	background: white;
+}
+
+.header-content-toggle{
+	background: #222223;
+}
+
+.header-logo-container{
+	width: 305px;
+	top: 15px;
+	position: relative;
+	display: block;
+	margin: 0 auto;
+}
+
+.header-logo-container a.logo {
+  font-size: 40px;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  line-height: 25px;
+}
+
+.header-logo-container a.logo img{
+	height: 38px;
+}
+
+.header-navbar-icon{
+	position: absolute;
+    top: 19px;
+    overflow: hidden;
+    display: inline-block;
+    width: 24px;
+    height: 20px;
+}
+
+.header-navbar-icon span{
+	display: block;
+	position: absolute;
+	width: 18px;
+	height: 3px;
+	background: black;
+	text-indent: -1000em;
+	right: 0;
+	transition: transform .2s ease-in-out;
+}
+
+.header-navbar-icon-toggle span{
+	background: #fff;
+}
+
+.header-navbar-icon span:nth-child(1) {
+    top: 3px;
+}
+
+.header-navbar-icon span:nth-child(2) {
+    top: 10px;
+}
+
+.header-navbar-icon span:nth-child(3) {
+    top: 17px;
+}
+/* Header End */
+
+/* Navigation Header Start */
+
+.nav-header {
+	position: relative;
+	z-index: 1000;
+	max-width: 1280px;
+	margin: 0 auto;
+	height: 42px;
+	padding: 0 20px;
+}
+
+.nav-header-toggle{
+	visibility: hidden;
+}
+
+.nav-header-content{
+	position: relative;
+	width: 100%;
+	height: 42px;
+	z-index: 1000;
+	background: white;
+}
+
+.nav-header-container{
+	flex: 1;
+	height: 42px;
+	text-align: center;
+	border-bottom: 1px #cdcdcd solid;
+	transition: background .2s ease-in-out;
+}
+
+.nav-header-container ul{
+	display: inline;
+}
+
+.nav-header-container ul li{
+	list-style: none;
+	display: inline-block;
+	padding: 8px 25px;
+}
+
+.nav-header-container ul a{
+	font-size: 17px;
+	color: black;
+	text-decoration: none;
+}
+
+/* Navigation Header End */
+
+/* Left Navigation Start */
+
+.left-nav{
+	z-index: 999;
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	visibility: hidden;
+	opacity: 0;
+	transition: visibility 0s linear .2s, opacity .2s ease-in-out;
+    transition-delay: 0.2s, 0s;
+	background: #222223;
+	overflow: auto;
+}
+
+.left-nav-toggle {
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0s;
+}
+
+.left-nav-content {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 100px 20px 64px;
+}
+
+.left-nav-sections {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.left-nav-section {
+    padding-bottom: 32px;
+    order: 0;
+    flex-basis: 30%;
+}
+
+.left-nav-section-after{
+	order: 2;
+}
+
+.left-nav-section-title-link {
+    text-decoration: none;
+    color: #a1a1a3;
+    font-size: 28px;
+    line-height: 27px;
+}
+
+.left-nav-subnav-link {
+    color: #283237;
+    text-decoration: none;
+    border-bottom: 1px transparent solid;
+    transition: border-bottom-color .2s ease-in;
+    color: #fff;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.left-nav-section-title a:hover{
+	color: #a1a1a3;
+    text-decoration: none;
+}
+
+.left-nav-subnav a:hover{
+	color: #fff;
+    text-decoration: underline;
+}
+
+.left-nav-newspaper{
+    display: inline-block;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    font-size: 18px;
+    padding: 10px 0;
+    background: transparent;
+    color: #fff;
+    border: none;
+        border-bottom-color: currentcolor;
+        border-bottom-style: none;
+        border-bottom-width: medium;
+    border-bottom: 1px #fff solid;
+    outline: none;
+    border-radius: 0;
+    width: 400px;
+}
+
+.left-nav-section-wide{
+	flex-basis: 40%;
+}
+
+.left-nav-newspaper-subscribe{
+	font-size: 20px;
+	border: 1px #fff solid;
+	background: transparent;
+    background-color: transparent;
+	outline: none;
+	cursor: pointer;
+	padding: 10px 20px;
+	color: #fff;
+	transition: background-color .2s ease;
+}
+
+.left-nav-newspaper-subscribe:hover{
+	background-color: rgba(0,0,0,0.9);
+}
+
+.left-nav-social {
+    margin-top: 33px;
+}
+
+.left-nav-social-item {
+    color: #a1a1a3;
+    margin-right: 15px;
+    font-size: 28px;
+    line-height: 30px;
+}
+
+.left-nav-social-link {
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 1px transparent solid;
+    transition: border-bottom-color .2s ease-in;
+    font-size: 18px;
+    line-height: 27px;
+    color: #fff;
+    border-bottom: 1px transparent solid;
+    text-decoration: none;
+}
+
+/* Left Navigation End */
+
+/* Media Query for Full Header Start */
+
+@media only screen and (max-width: 600px) {
+
+	.header-logo-container a.logo img{
+		height: 27px;
+		padding-left: 20px;
+	}
+
+	.header-logo-container{
+		width: 280px;
+		top: 13px;
+		position: relative;
+		display: block;
+		margin: 0 auto;
+	}
+  	
+  	.nav-header{
+		visibility: hidden;
+	}
+
+	.header-navbar-icon{
+		position: absolute;
+	    top: 19px;
+	    overflow: hidden;
+	    display: inline-block;
+	    width: 24px;
+	    height: 20px;
+	    left: -10px;
+	}
+
+	.left-nav-content {
+	    max-width: 1280px;
+	    margin: 0 auto;
+	    padding: 70px 0px 64px;
+	}
+
+	.left-nav-section {
+	    padding-bottom: 20px;
+	    order: 0;
+	    flex-basis: 15%;
+	}
+
+	.left-nav-section-wide{
+		flex-basis: 50%;
+	}
+
+	.left-nav-section-title-link {
+	    font-size: 18px;
+	    line-height: 25px;
+	}
+
+	.left-nav-subnav-link {	    
+	    font-size: 15px;
+	    line-height: 25px;
+	}
+
+	.left-nav-newspaper{
+    font-size: 15px;
+    width: 200px;
+	}
+
+	.left-nav-newspaper-subscribe{
+	font-size: 15px;	
+	padding: 8px 16px;	
+	}
+}
+
+@media only screen and (max-width: 800px) {
+	.left-nav-section {
+	    padding-bottom: 20px;
+	    order: 0;
+	    flex-basis: 100%;
+	}
+
+	.left-nav-section-wide{
+		flex-basis: 100%;
+	}
+}
+
+/* Media Query for Full Header Ends */
+
+/* Full Header End */
+
+
+/* Full Footer Start*/
+
+.footer {
+    background: #c5dbd7;
+    padding-top: 20px;
+    padding-left: 12px;
+    
+}
+
+.footer-logo-container{
+	width: auto;
+}
+
+.footer-logo-name{
+	width: 400px;
+}
+
+.footer-nav {
+    flex: 0 1 75%;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 50%;
+}
+
+.footer-nav ul{
+	display: inline;
+}
+
+.footer-nav-list {
+    flex: 1 1 25%;
+    margin-top: 30px;
+}
+
+.footer-nav-list a{
+	color: #2c2e2d;
+	font-size: 18px;
+	text-decoration: none;
+}
+
+.footer-nav-list a:hover{
+	color: black;	
+	text-decoration: underline;
+}
+
+.footer-company {
+    font-size: 15px;
+    line-height: 18px;
+    padding-bottom: 2px;
+}
+
+.contact a:hover{
+	text-decoration: none;
+	color: #2c2e2d;
+}
+
+.footer-nav-list-social p{
+	font-size: 18px;
+}
+
+.footer-nav-list-social li{
+    display: inline;
+    padding-right: 35px;
+}
+
+.footer-nav-list-social .fa {
+    color: #2c2e2d;
+    font-size: 30px;
+    transition: .5s;
+}
+
+.footer-nav-list-social .fa:hover {
+    color: black;
+}
+
+
+@media only screen and (max-width: 600px) {
+	.footer-logo-name{
+		width: 250px;
+	}
+
+	.footer-nav-list a{		
+		font-size: 14px;
+	}
+
+	.footer-company {
+	    font-size: 12px;
+	}
+}
+
+</style>
+<body class="nav-visible">
+
+	<!-- Header Part Start -->
+
+	<div class="master-header">
+		<header class="header" id="header">
+	        <div class="header-content" id="header-content">
+	          <div class="header-logo-container">
+	            <a class="logo" href="/">
+	            	<img id="logo-name" src="logo-name.png">
+	            </a>
+	          </div>
+	          <a class="header-navbar-icon" id="header-navbar-icon" href="javascript:;" onclick="openLeftNav();"> 
+	          	<span class="span-icon"></span>
+	          	<span class="span-icon"></span>
+	          	<span class="span-icon"></span>
+	          </a>
+	        </div>
+	    </header>
+	    <header class="nav-header" id="nav-header">
+	    	<div class="nav-header-content">
+	    		<div class="nav-header-container">
+	    			<ul>
+					  <a href="#home"><li>Share Market</li></a>
+					  <a href="#news"><li>Politics</li></a>
+					  <a href="#sdf"><li>Sports</li></a>
+					  <a href="#"><li>Startups</li></a>
+					</ul>		
+	    		</div>
+	    	</div>		
+	    </header>
+	    <div class="left-nav" id="left-nav">
+  			<div class="left-nav-content">
+    			<ul class="left-nav-sections">
+                    <li class="left-nav-section ">
+          				<h2 class="left-nav-section-title">
+          					<a class="left-nav-section-title-link" href="/inspiration/">Top News</a>
+          				</h2>
+                      	<ul class="left-nav-subnav">
+                            <li class="left-nav-subnav-item">
+                              	<a class="left-nav-subnav-link" href="/inspiration/">Government</a>
+                            </li>
+                            <li class="left-nav-subnav-item">
+                            	<a class="left-nav-subnav-link" href="/inspiration/">Politics</a>
+                            </li>
+                            <li class="left-nav-subnav-item">
+                            	<a class="left-nav-subnav-link" href="/inspiration/">Weather</a>
+                            </li>
+                            <li class="left-nav-subnav-item">
+                            	<a class="left-nav-subnav-link" href="/inspiration/">Environmental</a>
+                            </li>
+                            <li class="left-nav-subnav-item">
+                            	<a class="left-nav-subnav-link" href="/inspiration/">Global News</a>
+                            </li>
+                            <li class="left-nav-subnav-item">
+                            	<a class="left-nav-subnav-link" href="/inspiration/">Corona Virus</a></li>
+                        </ul>
+                  	</li>
+                    <li class="left-nav-section ">
+          				<h2 class="left-nav-section-title">
+          					<a class="left-nav-section-title-link" href="/tips/">Top Categories</a>
+          				</h2>
+          				<ul class="left-nav-subnav">
+                            <li class="left-nav-subnav-item">
+                              	<a class="left-nav-subnav-link" href="/inspiration/">Sports</a>
+                            </li>
+                            <li class="left-nav-subnav-item">
+                            	<a class="left-nav-subnav-link" href="/inspiration/">Finance</a>
+                            </li>
+                            <li class="left-nav-subnav-item">
+                            	<a class="left-nav-subnav-link" href="/inspiration/">Health</a>
+                            </li>
+                            <li class="left-nav-subnav-item">
+                            	<a class="left-nav-subnav-link" href="/inspiration/">Technology</a>
+                            </li>
+                            <li class="left-nav-subnav-item">
+                            	<a class="left-nav-subnav-link" href="/inspiration/">Entertainment</a>
+                            </li>
+                            <li class="left-nav-subnav-item">
+                            	<a class="left-nav-subnav-link" href="/inspiration/">Business</a>
+                            </li>
+                        </ul>
+                  	</li>                  	
+                  	<li class="left-nav-section left-nav-section-after">
+          				<h2 class="left-nav-section-title">
+          					<a class="left-nav-section-title-link" href="/tips/">Other Categories</a>
+          				</h2>
+          				<ul class="left-nav-subnav">
+                            <li class="left-nav-subnav-item">
+                              	<a class="left-nav-subnav-link" href="/inspiration/">Life &amp; Style</a>
+                            </li>
+                            <li class="left-nav-subnav-item">
+                            	<a class="left-nav-subnav-link" href="/inspiration/">Regional News</a>
+                            </li>
+                            <li class="left-nav-subnav-item">
+                            	<a class="left-nav-subnav-link" href="/inspiration/">Religion and Spirituality</a>
+                            </li>
+                            <li class="left-nav-subnav-item">
+                            	<a class="left-nav-subnav-link" href="/inspiration/">Education</a>
+                            </li>
+                            <li class="left-nav-subnav-item">
+                            	<a class="left-nav-subnav-link" href="/inspiration/">Media</a>
+                            </li>
+                            <li class="left-nav-subnav-item">
+                            	<a class="left-nav-subnav-link" href="/inspiration/">Children</a>
+                            </li>
+                        </ul>
+                  	</li>
+                  	<li class="left-nav-section left-nav-section-after">
+          				<h2 class="left-nav-section-title">
+          					<a class="left-nav-section-title-link" href="/tips/">The Khabri Special</a>
+          				</h2>
+          				<ul class="left-nav-subnav">
+                            <li class="left-nav-subnav-item">
+                              	<a class="left-nav-subnav-link" href="/inspiration/">Success Stories</a>
+                            </li>
+                            <li class="left-nav-subnav-item">
+                            	<a class="left-nav-subnav-link" href="/inspiration/">Startups</a>
+                            </li>
+                            <li class="left-nav-subnav-item">
+                            	<a class="left-nav-subnav-link" href="/inspiration/">Entrepreneur</a>
+                            </li>
+                            <li class="left-nav-subnav-item">
+                            	<a class="left-nav-subnav-link" href="/inspiration/">Blogs</a>
+                            </li>
+                        </ul>
+                  	</li> 
+                  	<li class="left-nav-section left-nav-section-after">
+          				<h2 class="left-nav-section-title">
+          					<a class="left-nav-section-title-link" style="color: #a1a1a3;">Find Us on</a>
+          				</h2>
+          				<ul class="left-nav-subnav">
+                            <li class="left-nav-subnav-item">
+                              	<a class="left-nav-subnav-link" href="/inspiration/">Twitter</a>
+                            </li>
+                            <li class="left-nav-subnav-item">
+                            	<a class="left-nav-subnav-link" href="/inspiration/">Facebook</a>
+                            </li>
+                            <li class="left-nav-subnav-item">
+                            	<a class="left-nav-subnav-link" href="/inspiration/">Instagram</a>
+                            </li>
+                            <li class="left-nav-subnav-item">
+                            	<a class="left-nav-subnav-link" href="/inspiration/">Linkedin</a>
+                            </li>
+                        </ul>
+                  	</li>  
+                  	<li class="left-nav-section left-nav-section-wide">
+          				<h2 class="left-nav-section-title">
+          					<a class="left-nav-section-title-link" style="color: #a1a1a3;">Join Our Newspaper</a>
+          				</h2>
+          				<input type="email" name="email" class="left-nav-newspaper" placeholder="Type your email address"><br>
+          				<button class="left-nav-newspaper-subscribe" name="subscribe">Subscribe</button>		
+                  	</li>                	            
+    			</ul>
+  			</div>
+		</div>
+  	</div>
+
+  	<!-- Header Part End -->
+  	<br><br><br><br><br><br><br><br><br>
+
+  	<!-- Footer Part Start -->
+
+  	<div class="footer">  		
+      <div class="footer-info">
+      	<div class="footer-logo-container">
+	        <a class="logo" href="/">
+	        	<img class="footer-logo-name" src="logo-name.png">
+	        </a>
+	    </div>
+        <nav class="footer-nav">
+          <ul class="footer-nav-list">
+            <li class="footer-nav-item"><a class="footer-nav-link" href="/page/about-us/">Top News</a></li>
+            <li class="footer-nav-item"><a class="footer-nav-link" href="/podcast/">Top Categories</a></li>
+            <li class="footer-nav-item"><a class="footer-nav-link" href="/page/contact-us/">Blogs</a></li>            
+          </ul>
+          <ul class="footer-nav-list">
+            <li class="footer-nav-item"><a class="footer-nav-link" href="/page/about-us/">About Us</a></li>
+            <li class="footer-nav-item"><a class="footer-nav-link" href="/podcast/">Contact Us</a></li>
+            <li class="footer-nav-item"><a class="footer-nav-link" href="/page/contact-us/">Get News? Tell Us!</a></li>
+          </ul>
+          <ul class="footer-nav-list contact">
+            <li class="footer-nav-item"><a class="footer-nav-link">Contact</a></li>
+            <li class="footer-nav-item"><a class="footer-nav-link" style="font-size: 15px;">info@thebaazarkhabri.in</a></li>
+          </ul>
+          <ul class="footer-nav-list-social">
+          	<p>Follow Us On</p>
+            <li class="footer-nav-item"><a class="footer-nav-link" href="#"><i class="fa fa-twitter"></i></a></li>
+            <li class="footer-nav-item"><a class="footer-nav-link" href="#"><i class="fa fa-facebook"></i></a></li>
+            <li class="footer-nav-item"><a class="footer-nav-link" href="#"><i class="fa fa-instagram"></i></a></li>
+            <li class="footer-nav-item"><a class="footer-nav-link" href="#"><i class="fa fa-linkedin"></i></a></li>       
+          </ul>          
+        </nav>
+      </div>
+      <div class="footer-company">
+        <center><p class="footer-copyright">© 2020 The Baazar Khabri</p></center>
+      </div>
+    </div>
+
+  	<!-- Footer Part End -->
+
+  	<script type="text/javascript">
+  		var flag = 'no';
+		function openLeftNav() {
+			var elem1 = document.getElementById("left-nav");
+   			elem1.classList.toggle("left-nav-toggle");
+
+   			var elem2 = document.getElementById("nav-header");
+   			elem2.classList.toggle("nav-header-toggle");
+
+   			var elem3 = document.getElementById("header-content");
+   			elem3.classList.toggle("header-content-toggle");
+   			
+   			var elem4 = document.getElementById("header-navbar-icon");
+   			elem4.classList.toggle("header-navbar-icon-toggle");
+
+   			var elem5 = document.getElementById("logo-name");
+   			
+   			if(flag == 'no'){
+   				elem5.src = "logo-name-white.png";
+   				flag = 'yes';
+   			}
+   			else{
+   				elem5.src = "logo-name.png";
+   				flag = 'no';
+   			}
+		}
+  	</script>
+</body>
+
